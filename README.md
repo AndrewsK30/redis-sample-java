@@ -1,31 +1,45 @@
-redis-sample-java
-=================
+# Exemplos de comandos de Redis em java com Jedis e Junit.
 
-English:
-========
+Este repositório tem como objetivo apenas exemplificar alguns comandos de Redis no java.
+### Requisitos
+* Maven
+* Java
+* Redis
+## Instalação do Redis
 
-This is a set of very simple test cases to demonstrate Redis with Java.
-I wrote a simple class with JUnit+Fest Assert for Devoxx France conference.
+Para linux ou OSX
+```
+wget http://download.redis.io/redis-stable.tar.gz
+tar xvzf redis-stable.tar.gz
+cd redis-stable
+make
+```
+Para windows
 
-Pre-requisites : A Redis server, up and running on port 6379. Check Redis quickstart documentation here
-http://redis.io/topics/quickstart
+[Baixe o zip](https://github.com/MSOpenTech/redis/releases)
 
-The test executes itself on DB 2 (with a SELECT 2) thus it should not impact a local existing DB.
+## Rodando o servidor do Redis
 
+Para Linux ou OSX e rode o comando:
 
-En Français dans le texte :
-===========================
+```
+redis-server
+```
 
-Ce projet est un petit exemple de code simple, écrit pour la conférence Devoxx France.
+Para windows execute
 
-Elle utilise le driver Jedis, le plus utilisé dès lors qu'il s'agit de faire du Java avec une base Redis.
+```
+redis-server.exe
+```
 
-Pour tester, vous devez d'abord installer un serveur Redis sur votre machine (http://redis.io/topics/quickstart)
-Par défaut, Redis écoute sur le port TCP 6379.
+Para executar consultas no redis, Linux ou OSX:
 
-Le test s'execute sur l'instance 2 de Redis en effectue un flushdb (vide toute la base 2).
-Si vous ne souhaitez pas installer un serveur Redis, vous pouvez utiliser "Redis to Go" qui offre des plans gratuits
-pour une petite base de 5Mo sans sauvegarde (https://redistogo.com).
+```
+redis-cli
+```
 
-Nicolas Martignole
-@nmartignole
+Para windows:
+
+```
+redis-cli.exe
+```
